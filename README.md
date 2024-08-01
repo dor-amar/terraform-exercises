@@ -1,6 +1,6 @@
 ## Installation and Setup
 
-### Demo: Installing Terraform
+### Installing Terraform
 
 1. **Download Terraform** from the official [Terraform website](https://www.terraform.io/downloads).
 2. **Install Terraform** on your system by following the instructions for your operating system.
