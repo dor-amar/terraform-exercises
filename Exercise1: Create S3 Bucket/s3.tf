@@ -1,8 +1,12 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-central-1"
 }
 
-resource "aws_s3_bucket" "example" {
-  bucket = "my-unique-bucket-name-123"
-  acl    = "private"
+resource "aws_s3_bucket" "mybucket" {
+  bucket = "my-tf-test-bucket-1"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
 }

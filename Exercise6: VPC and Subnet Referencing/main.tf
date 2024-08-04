@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-central-1"
 }
 
 # Create a VPC
@@ -18,6 +18,8 @@ resource "aws_subnet" "public" {
   tags = {
     Name = "public-subnet"
   }
+
+  depends_on = [ aws_vpc.main ]
 }
 
 # Output the VPC ID
