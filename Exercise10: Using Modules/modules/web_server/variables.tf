@@ -1,4 +1,4 @@
-variable "vpc_id" {
+variable "vpc_id_august" {
   description = "The ID of the VPC"
   type        = string
 }

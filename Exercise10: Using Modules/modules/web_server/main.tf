@@ -1,5 +1,5 @@
 resource "aws_security_group" "web_sg" {
-  vpc_id = var.vpc_id
+  vpc_id = var.vpc_id_august
 
   ingress {
     description = "Allow SSH"
