@@ -2,6 +2,19 @@ locals {
   app_name = "nginx"
   }
 
+
+resource "aws_security_group" "example" {
+  # ... other configuration ...
+
+  egress {
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
+  }
+}
+
 # Define a Security Group for the EC2 instances
 resource "aws_security_group" "api_sg" {
   name        = "${local.app_name}"
